@@ -6,8 +6,8 @@ var ErrorModel = React.createClass({
         }
     },
     propTypes: {
-        title: React.propTypes.string,
-        message: React.propTypes.string.isRequired
+        title: React.PropTypes.string,
+        message: React.PropTypes.string.isRequired
     },
     componentDidMount: function() {
         debugger;

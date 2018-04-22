@@ -35462,7 +35462,7 @@
 	            if (isLoading) {
 	                return React.createElement(
 	                    'h3',
-	                    null,
+	                    { className: 'text-center' },
 	                    'Fetching Weather...'
 	                );
 	            } else if (temp && location) {
@@ -35475,8 +35475,8 @@
 	            null,
 	            React.createElement(
 	                'h3',
-	                null,
-	                'Weather Components'
+	                { className: 'text-center' },
+	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            renderMessage()
@@ -35515,7 +35515,7 @@
 	                React.createElement('input', { type: 'text', ref: 'location' }),
 	                React.createElement(
 	                    'button',
-	                    null,
+	                    { className: 'button expanded hollow' },
 	                    'Get Weather'
 	                )
 	            )
@@ -35529,29 +35529,25 @@
 /* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	    displayName: 'WeatherMessage',
+	    displayName: "WeatherMessage",
 
 	    render: function render() {
 	        var location = this.props.location;
 	        var temp = this.props.temp;
 
 	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(
-	                'p',
-	                null,
-	                'Its ',
-	                temp,
-	                ' in ',
-	                location,
-	                '!!!'
-	            )
+	            "h1",
+	            { className: "text-center" },
+	            "Its ",
+	            temp,
+	            " in ",
+	            location,
+	            "!!!"
 	        );
 	    }
 	});
@@ -37136,7 +37132,7 @@
 /* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -37150,9 +37146,18 @@
 
 	var About = function About(props) {
 	    return React.createElement(
-	        'h3',
+	        "div",
 	        null,
-	        'About component'
+	        React.createElement(
+	            "h1",
+	            { className: "text-center" },
+	            "About"
+	        ),
+	        React.createElement(
+	            "p",
+	            null,
+	            "This is a weather app."
+	        )
 	    );
 	};
 

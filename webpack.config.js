@@ -4,9 +4,9 @@ module.exports = {
     entry: [
         'script!jquery/dist/jquery.min.js',
         'script!foundation-sites/dist/foundation.min.js',
-        "./app/app.jsx"
+        './app/app.jsx'
     ],
-    external: {
+    externals: {
         jquery: 'jQuery'
     },
     plugins: [
@@ -25,12 +25,12 @@ module.exports = {
             Main: 'app/components/Main.jsx',
             Nav: 'app/components/Nav.jsx',
             Weather: 'app/components/Weather.jsx',
-            About: 'app/components/About.jsx',
-            Example: 'app/components/Example.jsx',
-            ErrorModel: 'app/components/ErrorModel.jsx',
             WeatherForm: 'app/components/WeatherForm.jsx',
             WeatherMessage: 'app/components/WeatherMessage.jsx',
+            About: 'app/components/About.jsx',
+            Example: 'app/components/Example.jsx',
             openWeatherMap: 'app/api/openWeatherMap.jsx',
+            ErrorModal: 'app/components/ErrorModal.jsx',
             applicationStyles: 'app/styles/app.scss'
         },
         extensions: ['', '.js', '.jsx']
@@ -47,5 +47,5 @@ module.exports = {
             }
         ]
     },
-    devtools: 'cheap-module-eval-source-map'
+    devtool: 'cheap-module-eval-source-map'
 };
